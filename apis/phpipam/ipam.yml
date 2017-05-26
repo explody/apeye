@@ -1,0 +1,32 @@
+environments:
+  development:
+    host: phpipam.local
+    #host: localhost
+    scheme: https
+    #scheme: http
+    port: 443
+    #port: 8080
+    ssl:
+        verify: True
+        # cert: /path/to/client.crt
+        # key: /path/to/client.key
+    credfile: development.yml
+    authtype: basic
+    apifile: ipam-api.yml
+    objfile: ipam-objects.yml
+  production:
+    host: yourhost.okta.com
+    authtype: param
+    credentials:
+      username: someuser
+      password: somepass
+    apifile  : ipam-api.yml
+    objfile  : ipam-objects.yml
+
+# Common settings apply to all environments
+common:
+  basepath: "/api"
+  default_tokens:
+    app_id: mike
+  params:
+    may: ["links","filter_by","filter_value"]

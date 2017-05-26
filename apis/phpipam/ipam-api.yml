@@ -1,0 +1,133 @@
+classes:
+  user:
+    get_token:
+      method:   POST
+      path:     /:app_id/user/
+  sections:
+    getall:
+      method:   GET
+      path:     /:app_id/sections/
+    get:
+      method:   GET
+      path:     /:app_id/sections/:id/
+    create:
+      method:   POST
+      path:     /:app_id/sections/
+      return:   201
+    update:
+      method:   PATCH
+      path:     /:app_id/sections/:id
+    delete:
+      method:   DELETE
+      path:     /:app_id/sections/:id
+    options:
+      method:   OPTIONS
+      path:     /:app_id/sections/:id
+    subnets:
+      method:   GET
+      path:     /:app_id/sections/:id/subnets/
+  subnets:
+    getall:
+      method:   GET
+      path:     /:app_id/subnets/
+    get:
+      method:   GET
+      path:     /:app_id/subnets/:id/
+      return:   200
+    get_cidr:
+      method:   GET
+      path:     /:app_id/subnets/cidr/:id/
+      return:   200
+    addresses:
+      method:   GET
+      path:     /:app_id/subnets/:id/addresses/
+      return:   200
+    search:
+      method:   GET
+      path:     /:app_id/subnets/search/:id/
+    create:
+      method:   POST
+      path:     /:app_id/subnets/
+      return:   201
+    update:
+      method:   PATCH
+      path:     /:app_id/subnets/:id/
+      return:   200
+    delete:
+      method:   DELETE
+      path:     /:app_id/subnets/:id/
+  folders:
+    getall:
+      method:   GET
+      path:     /sections
+  addresses:
+    add:
+      method:   POST
+      path:     /:app_id/addresses/
+      return:   201
+    update:
+      method:   PATCH
+      path:     /:app_id/addresses/:id/
+      return:   200
+    getall:
+      method:   GET
+      path:     /:app_id/addresses/
+    search:
+      method:   GET
+      path:     /:app_id/addresses/search/:id/
+  l2domains:
+    getall:
+      method:   GET
+      path:     /l2domains/
+    get:
+      method:   GET
+      path:     /l2domains/:id
+    update:
+      method:   PATCH
+      path:     /l2domains/:id
+    create:
+      method:   POST
+      path:     /l2domains/
+  vlans:
+    getall:
+      method:   GET
+      path:     /:app_id/tools/vlans/
+    get:
+      method:   GET
+      path:     /:app_id/tools/vlans/:id/
+    search:
+      method:   GET
+      path:     /:app_id/tools/vlans/search/:id/
+    create:
+      method:   POST
+      path:     /:app_id/tools/vlans/
+      return:   201
+  vrfs:
+    getall:
+      method:   GET
+      path:     /sections
+  devices:
+    options:
+      method:   OPTIONS
+      path:     /:app_id/devices/
+    getall:
+      method:   GET
+      path:     /:app_id/devices/
+    add:
+      method:   POST
+      path:     /:app_id/devices/
+      return:   201
+    delete:
+      method:   DELETE
+      path:     /:app_id/devices/:id/
+    get:
+      method:   GET
+      path:     /:app_id/devices/:id/
+    update:
+      method:   PATCH
+      path:     /:app_id/devices/:id/
+    search:
+      method:   GET
+      path:     /:app_id/devices/search/:id/
+     
+        

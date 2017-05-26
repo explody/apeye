@@ -1,0 +1,28 @@
+environments:
+  development:
+    host: subdomain.okta.com
+    scheme: https
+    port: 443
+    ssl:
+        verify: True
+        # cert: /path/to/client.crt
+        # key: /path/to/client.key
+    credfile: development.yml
+    authtype: header
+    apifile: okta-api.yml
+    objfile: okta-objects.yml
+  production:
+    host: yourhost.okta.com
+    authtype: param
+    credentials:
+      username: someuser
+      password: somepass
+    apifile  : okta-api.yml
+    objfile  : okta-objects.yml
+
+# Common settings apply to all environments
+common:
+  type: "application/vnd.api+json"
+  basepath: "/api/v1"
+  params:
+    may: ["links","filter_by","filter_value"]
